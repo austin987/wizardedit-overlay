@@ -1,0 +1,26 @@
+diff -ur spring-framework-4.1.5.RELEASE.orig/spring-aop/src/main/java/org/springframework/aop/framework/ObjenesisCglibAopProxy.java spring-framework-4.1.5.RELEASE/spring-aop/src/main/java/org/springframework/aop/framework/ObjenesisCglibAopProxy.java
+--- spring-framework-4.1.5.RELEASE.orig/spring-aop/src/main/java/org/springframework/aop/framework/ObjenesisCglibAopProxy.java	2015-02-20 05:09:01.000000000 -0600
++++ spring-framework-4.1.5.RELEASE/spring-aop/src/main/java/org/springframework/aop/framework/ObjenesisCglibAopProxy.java	2016-01-20 16:41:51.086941960 -0600
+@@ -22,8 +22,8 @@
+ import org.springframework.cglib.proxy.Callback;
+ import org.springframework.cglib.proxy.Enhancer;
+ import org.springframework.cglib.proxy.Factory;
+-import org.springframework.objenesis.ObjenesisException;
+-import org.springframework.objenesis.ObjenesisStd;
++import org.objenesis.ObjenesisException;
++import org.objenesis.ObjenesisStd;
+ 
+ /**
+  * Objenesis based extension of {@link CglibAopProxy} to create proxy instances without
+diff -ur spring-framework-4.1.5.RELEASE.orig/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MvcUriComponentsBuilder.java spring-framework-4.1.5.RELEASE/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MvcUriComponentsBuilder.java
+--- spring-framework-4.1.5.RELEASE.orig/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MvcUriComponentsBuilder.java	2015-02-20 05:09:01.000000000 -0600
++++ spring-framework-4.1.5.RELEASE/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MvcUriComponentsBuilder.java	2016-01-20 16:41:26.704943966 -0600
+@@ -40,7 +40,7 @@
+ import org.springframework.core.MethodParameter;
+ import org.springframework.core.ParameterNameDiscoverer;
+ import org.springframework.core.annotation.AnnotationUtils;
+-import org.springframework.objenesis.ObjenesisStd;
++import org.objenesis.ObjenesisStd;
+ import org.springframework.util.AntPathMatcher;
+ import org.springframework.util.Assert;
+ import org.springframework.util.ObjectUtils;
