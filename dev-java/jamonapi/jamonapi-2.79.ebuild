@@ -29,7 +29,10 @@ RDEPEND=">=virtual/jre-1.5
 	dev-java/jetty-server:7
 	dev-java/log4j:0
 	dev-java/spring-core:4.1
-	java-virtuals/servlet-api:2.3"
+	dev-java/spring-stereotype:4.1
+	java-virtuals/servlet-api:2.3
+	dev-java/tomcat:7"
+	# FIXME: if use tomcat.. dev-java/tomcat:7
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="
@@ -39,8 +42,10 @@ EANT_GENTOO_CLASSPATH="
 	jetty-server:6
 	jetty-server:7
 	servlet-api-2.3
-	spring-core-4.1"
-
+	spring-core-4.1
+	spring-stereotype-4.1
+	tomcat-7"
+	#FIXME: if use tomcat..
 
 DEPEND=">=virtual/jdk-1.5
 	dev-java/aspectj:0
@@ -56,13 +61,16 @@ S="${WORKDIR}"
 java_prepare() {
 	rm -rf __MACOSX
 	rm ${MY_PN}all-${PV}/${MY_PN}-${PV}{,-javadoc}.jar ${MY_PN}all-${PV}/${MY_PN}{-osmon,tomcat}-${PV}.jar ${MY_PN}all-${PV}/${MY_PN}.war || die
-	
+
 	# No provided ant script! Bad upstream, bad!
 	cp "${FILESDIR}"/build-1.0.xml build.xml || die
 	
 	mkdir ${S}/src
 	cd ${S}/src
 	unpack ./../${MY_PN}all-${PV}/${MY_PN}-${PV}-sources.jar
+	
+	# FIXME: if use tomcat ...
+	rm -rf com/jamontomcat # com/jamonapi/http/JAMonTomcatValve.java
 }
 
 #src_compile() {
