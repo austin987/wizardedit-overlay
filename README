@@ -1,4 +1,10 @@
 wizardedit portage overlay
 
+Most of the packages here are dependencies of dev-java/artifactory (a work in progress).
+dev-java/artifactory-bin is usable until that is ready.
 
-Meant to be upstreamed in Gentoo, but while waiting on that, staging here.
+Some of the packages in this overlay are not yet functional. Others are incomplete (e.g., doc/test are untested).
+Licenses are mostly wrong, so should not be trusted (most are blank or marked FIXME).
+Keywords are also a mess, based on the previous version of the package if applicable, or usually set to amd64.
+
+These ebuilds are meant to be upstreamed in Gentoo, but in the meantime, staging here.
