@@ -22,6 +22,8 @@ KEYWORDS="amd64 x86"
 CDEPEND="
 	dev-util/findbugs:0
 	dev-java/javax-cache:0
+	dev-java/jsr305:0
+	dev-java/log4j:0
 	dev-java/log4j-api:2
 	dev-java/minimal-json:0
 	dev-java/osgi-core-api:0
@@ -34,6 +36,6 @@ DEPEND=">=virtual/jdk-1.7
 RDEPEND=">=virtual/jre-1.7
 	${CDEPEND}"
 
-JAVA_GENTOO_CLASSPATH="findbugs,javax-cache,minimal-json,osgi-core-api,log4j-api-2,slf4j-api"
+JAVA_GENTOO_CLASSPATH="findbugs,javax-cache,jsr305,minimal-json,osgi-core-api,log4j,log4j-api-2,slf4j-api"
 
 JAVA_SRC_DIR="${S}/${MY_P}/${MY_PN}/src/main/java/com/${MY_PN}"
