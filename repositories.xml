@@ -1,0 +1,11 @@
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>wizardedit-overlay</name>
+		<description>Various ebuilds (mostly dev-java/artifactory related) that aren't yet committed in Gentoo upstream.</description>
+		<homepage>https://github.com/austin987/wizardedit-overlay</homepage>
+		<owner>
+			<email>austinenglish@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/austin987/wizardedit-overlay.git</source>
+	</repo>
+</repositories>
